@@ -8,7 +8,7 @@ import numpy as np
 '''
 
 
-def nelder_mead(f, x0, l=[1, 2], epslon=10e-6, max=0,
+def nelder_mead(f, x0, l=[1., 2.], epslon=10e-6, max=0,
                 alpha=1., gamma=2., rho=0.5, sigma=0.5):
 
     prev_best = f(x0)
