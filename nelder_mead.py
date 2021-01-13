@@ -1,11 +1,6 @@
 import copy
 import math
 import numpy as np
-'''
-    https://github.com/fchollet/nelder-mead/blob/master/nelder_mead.py
-    Pure Python/Numpy implementation of the Nelder-Mead algorithm.
-    Reference: https://en.wikipedia.org/wiki/Nelder%E2%80%93Mead_method
-'''
 
 
 def nelder_mead(f, x0, l=[1., 2.], epslon=10e-6, max=0,
