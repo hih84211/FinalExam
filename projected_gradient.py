@@ -11,7 +11,7 @@ def Gradient(f, X=None):
     else:
         return grd(f, v)
 
-def find_min(f, cf, x0, epslon):
+def find_min(f, cf, x0, epslon, max_iter=10000):
     v = list(ordered(f.free_symbols))
     A = np.array(cf[0])[np.newaxis]
     B = cf[1]
@@ -25,7 +25,7 @@ def find_min(f, cf, x0, epslon):
     xk = x0
     alpha = 1e-4
 
-    for i in range(10000):
+    for i in range(max_iter):
         g_xk = np.array(list(g.subs(list(zip(v, xk)))), dtype=np.float)
         xk1 = xk - alpha * np.dot(P, g_xk)
         if np.linalg.norm(xk1 - xk) < epslon:
