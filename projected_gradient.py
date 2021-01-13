@@ -49,7 +49,3 @@ if __name__ == '__main__':
     print(find_min(f, cf, [0, 3], .00001))
 
 
-
-
-
-
